@@ -8,56 +8,22 @@ package automationFramework;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TC7_UploadWrongExtFile {
+import base.TC_Base;
+
+public class TC7_UploadWrongExtFile extends TC_Base {
 
 	public static void main (String[] args) throws InterruptedException {
 		
-		
-//  L  O  G  I  N
-		
-		// Create a new instance of the Firefox driver
-		WebDriver driver;
-		System.setProperty("webdriver.gecko.driver", "C:\\geckodriver-v0.14.0-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
-				
-		//Launch https://staging.joordev.com website
-		driver.get("https://staging.joordev.com/");
-		 
-		// Print a log message to the screen
-		System.out.println("Successfully opened https://staging.joordev.com/");
-		 
-		Thread.sleep(5);
-		
-		//Click on the Login button
-		driver.findElement(By.className("login-button")).click();
-		
-		Thread.sleep(500);
-		
-		//Fill in the Login Name field		
-		WebElement element = driver.findElement(By.id("login-name"));
-		element.sendKeys("qatest1");
-		
-		//Fill in the Email field 
-		WebElement element1 = driver.findElement(By.name("data[User][password]"));
-		element1.sendKeys("qatest1");
-		//and submit
-		element1.sendKeys(Keys.RETURN);
-		
-		Thread.sleep(1000);
-		
-		// Print a log message to the screen
-		System.out.println("Successfully logged in to https://staging.joordev.com/");
-		
-//  L  O  G  I  N
-		
-		
-//  H A N D L I N G   ' C O M P O S E   A   M E S S A G E '  P O P U P
-		
+		TC7_UploadWrongExtFile test = new TC7_UploadWrongExtFile();
+		test.login();
+		test.uploadWrongExtFileTest();
+		test.logout();
+		test.close();
+	}
+
+	public void uploadWrongExtFileTest() throws InterruptedException {
 		//Open the Compose a Message popup 
 		driver.get("https://staging.joordev.com/messages/#!compose");
 		Thread.sleep(1000);		
@@ -102,32 +68,7 @@ public class TC7_UploadWrongExtFile {
 		System.out.println("ALERT CONFIRMED: File is too large");
 		Thread.sleep(1000);
 							
-		// Close 'Compose a Message' popup
+		// Click the cross button to close Compose a Message popup
 		driver.findElement(By.xpath("//img[@alt='Close']")).click();
-				
-//  H A N D L I N G   ' C O M P O S E   A   M E S S A G E '  P O P U P
-				
-		
-//  L O G O U T
-		
-		// Click on Regress Java button
-		driver.findElement(By.xpath("//span[contains(.,'Regress Java')]")).click();
-		Thread.sleep(3000);
-		
-		// Click on Logout button
-		driver.findElement(By.xpath("//a[@href='/users/logout']")).click();
-		
-		// Print a log message to the screen
-		System.out.println("Successfully logged out");		
-		Thread.sleep(2000);
-		
-//  L O G O U T
-		
-				
-		// Close the driver
-		driver.quit();
-		
-		// Print a log message to the screen
-		System.out.println("The brower's closed");
 	}
 }
