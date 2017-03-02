@@ -7,7 +7,7 @@ import base.TC_Base;
 
 public class TC1_SendMessageToAll extends TC_Base {
 
-	public static void main (String[] args) throws InterruptedException {
+	public static void main (String... args) throws InterruptedException {
 		
 		TC1_SendMessageToAll test = new TC1_SendMessageToAll();
 		test.login();

@@ -10,7 +10,7 @@ import base.TC_Base;
 
 public class TC4_UploadCorrectFilePng extends TC_Base {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException {
 
 		TC4_UploadCorrectFilePng test = new TC4_UploadCorrectFilePng();
 		test.login();

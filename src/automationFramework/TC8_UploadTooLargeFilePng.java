@@ -17,7 +17,7 @@ import base.TC_Base;
 
 public class TC8_UploadTooLargeFilePng extends TC_Base {
 
-	public static void main (String[] args) throws InterruptedException {
+	public static void main (String... args) throws InterruptedException {
 		
 		TC8_UploadTooLargeFilePng test = new TC8_UploadTooLargeFilePng();
 		test.login();

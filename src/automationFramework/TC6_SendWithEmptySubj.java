@@ -12,7 +12,7 @@ import base.TC_Base;
 
 public class TC6_SendWithEmptySubj extends TC_Base {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException {
 
 		TC6_SendWithEmptySubj test = new TC6_SendWithEmptySubj();
 		test.login();

@@ -14,7 +14,7 @@ import base.TC_Base;
 
 public class TC7_UploadWrongExtFile extends TC_Base {
 
-	public static void main (String[] args) throws InterruptedException {
+	public static void main (String... args) throws InterruptedException {
 		
 		TC7_UploadWrongExtFile test = new TC7_UploadWrongExtFile();
 		test.login();

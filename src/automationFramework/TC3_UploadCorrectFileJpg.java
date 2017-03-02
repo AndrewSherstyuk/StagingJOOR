@@ -10,7 +10,7 @@ import base.TC_Base;
 
 public class TC3_UploadCorrectFileJpg extends TC_Base {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException {
 
 		TC3_UploadCorrectFileJpg test = new TC3_UploadCorrectFileJpg();
 		test.login();

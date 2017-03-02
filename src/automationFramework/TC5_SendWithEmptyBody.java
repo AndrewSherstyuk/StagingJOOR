@@ -12,7 +12,7 @@ import base.TC_Base;
 
 public class TC5_SendWithEmptyBody extends TC_Base {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException {
 		
 		TC5_SendWithEmptyBody test = new TC5_SendWithEmptyBody();
 		test.login();

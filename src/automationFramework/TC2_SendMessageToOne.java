@@ -7,7 +7,7 @@ import base.TC_Base;
 
 public class TC2_SendMessageToOne extends TC_Base {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String... args) throws InterruptedException {
 
 		TC2_SendMessageToOne test = new TC2_SendMessageToOne();
 		test.login();
@@ -35,7 +35,8 @@ public class TC2_SendMessageToOne extends TC_Base {
 		Thread.sleep(5000);
 		// driver.findElement(By.xpath("/html/body/ul/li[1]/a")).click();
 
-		driver.findElement(By.xpath("//a[contains(.,'JOOR Regress ( JR112 ) - New York, NY')]")).click();
+		WebElement elementM = driver.findElement(By.xpath("//a[contains(.,'JOOR Regress ( JR112 ) - New York, NY')]"));
+		elementM.findElement(By.xpath("..")).click();
 
 		// driver.findElement(By.cssSelector(".ui-autocomplete:not([style*='display:
 		// none']) .ui-menu-item:nth-child(-1) a")).click();
